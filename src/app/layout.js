@@ -1,16 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto, Roboto_Mono } from "next/font/google";
 import { Tomorrow } from "next/font/google";
 import { FrameInit } from "@/components/FrameInit";
 import Navigation from "@/components/Navigation";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["500"], // 500 is Medium/Semi Bold in Roboto
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoMono = Roboto_Mono({
+  variable: "--font-roboto-mono",
   subsets: ["latin"],
 });
 
@@ -28,7 +29,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${tomorrow.variable}`}>
+      <body className={`${roboto.variable} ${robotoMono.variable} ${tomorrow.variable}`}>
         <div>
           {children}
           <FrameInit />
