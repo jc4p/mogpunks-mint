@@ -68,7 +68,7 @@ export function MintForm() {
       setStatus({ type: STATUS_TYPES.LOADING, message: 'Connecting to wallet...' }); // User feedback
       try {
         console.log('[MintForm] Requesting accounts from Frame SDK...');
-        const accountsPromise = frame.sdk.wallet.ethProvider.request({
+        const accountsPromise = await frame.sdk.wallet.ethProvider.request({
           method: 'eth_requestAccounts'
         });
         const timeoutPromise = new Promise((_, reject) =>
