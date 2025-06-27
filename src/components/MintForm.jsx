@@ -173,7 +173,7 @@ export function MintForm() {
 
   const handleShareOnWarpcast = () => {
     console.log('[MintForm] handleShareOnWarpcast called.');
-    const targetText = 'Checkout MogPunks, a 10k collection!';
+    const targetText = 'Check out MogPunks by @xexcy. Free mint for Farcaster OGs, Interns and more!';
     const targetURL = process.env.NEXT_PUBLIC_APP_URL || window.location.origin;
     const finalUrl = `https://warpcast.com/~/compose?text=${encodeURIComponent(targetText)}&embeds[]=${encodeURIComponent(targetURL)}`;
     handleOpenUrl(finalUrl);

@@ -36,8 +36,8 @@ export function MintedNFTs({ txHash }) {
 
   const handleShareOnWarpcast = () => {
     const targetText = mintedNFTs.length > 1 
-      ? `Just minted ${mintedNFTs.length} MogPunks NFTs from the 10k collection!` 
-      : `Just minted MogPunk #${mintedNFTs[0].tokenId} from the 10k collection!`;
+      ? `Just minted ${mintedNFTs.length} MogPunks from @xexcy, Free mint for Farcaster OGs, Interns and more!` 
+      : `Just minted MogPunk #${mintedNFTs[0].tokenId} from @xexcy, Free mint for Farcaster OGs, Interns and more!`;
     const targetURL = process.env.NEXT_PUBLIC_APP_URL || window.location.origin;
     const finalUrl = `https://warpcast.com/~/compose?text=${encodeURIComponent(targetText)}&embeds[]=${encodeURIComponent(targetURL)}`;
     handleOpenUrl(finalUrl);
